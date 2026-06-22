@@ -1,4 +1,3 @@
-[![Build Status](https://travis-ci.org/haandol/honey.svg?branch=master)](https://travis-ci.org/haandol/honey)
 
 # Honey
 
@@ -16,14 +15,13 @@ $pip install -r requirements.txt
 
 ## Usage
 
-If you are using Python 2.x use [0.0.3](https://github.com/haandol/honey/tree/0.0.3)
+If you are using Python 2.x use [0.0.3]
 
 Like Django, you can config your bot by editing `settings.py`
 
 set `SLACK_TOKEN` variable in settings.py.
 if `REDIS_URL` is not setted, all Redis relevant features, like redis_brain, will be disabled.
 
-[한국어 튜토리얼](https://haandol.github.io/2019/04/30/making-python-slackbot-with-honey-tutorial.html)
 
 ### Congiure your bot
 
@@ -63,7 +61,7 @@ This just says `Hello world!!` to the channel when user typed the command, `!hi`
 ```python
 from .decorators import on_command
 
-@on_command(['hi', 'hello', '하이', 'ㅎㅇ'])
+@on_command(['hi', 'hello'])
 def hello_world(robot, channel, user, tokens):
     '''
         Simple app just says `Hello word!!`
@@ -80,7 +78,7 @@ def hello_world(robot, channel, user, tokens):
 And Honey supports multiple commands for each function.
 
 The above app can be invoked the command with Command Prefix (default is `!`) on the channel.
-It would be `!hello`, `!hi`, `!하이` or `!ㅎㅇ`
+It would be `!hello` or `!hi`
 
 
 ### Tokenizer
